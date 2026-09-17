@@ -34,10 +34,10 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((item, idx) => (
-          <div
-            key={idx}
-            className="flex flex-col justify-between bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-colors"
-          >
+         <div
+  key={idx}
+  className="flex flex-col justify-between bg-slate-900/50 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-sky-500/50 hover:shadow-lg hover:shadow-sky-500/10"
+>
             <div>
               <div className="flex justify-between items-center mb-4">
                 <span className="text-xs font-mono text-sky-400">0{idx + 1}.</span>
