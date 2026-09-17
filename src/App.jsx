@@ -8,19 +8,20 @@ import GithubStats from './components/GithubStats';
 import Contact from './components/Contact';
 import BackToTop from './components/BackToTop';
 
-// Inside App() JSX:
-return (
-  <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-sky-500 selection:text-slate-950">
-    <ScrollProgress />
-    <Navbar />
-    <main>
-      <Hero />
-      <Projects />
-      <Experience />
-      <Skills />
-      <GithubStats />
-    </main>
-    <Contact />
-    <BackToTop />
-  </div>
-);
+export default function App() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-sky-500 selection:text-slate-950">
+      <ScrollProgress />
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+        <Experience />
+        <Skills />
+        <GithubStats />
+      </main>
+      <Contact />
+      <BackToTop />
+    </div>
+  );
+}
