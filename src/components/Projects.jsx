@@ -1,0 +1,85 @@
+import { ExternalLink, Github, FolderGit2 } from 'lucide-react';
+
+const projects = [
+  {
+    title: "Encrypted File Sharing System",
+    description: "Secure, end-to-end encrypted platform featuring role-based access control, automated cryptographic key generation, and audit logging.",
+    tech: ["React", "Node.js", "Cryptography", "Tailwind CSS"],
+    github: "https://github.com/Rajit2207",
+    live: "https://example.com"
+  },
+  {
+    title: "IoT Drip Irrigation Prototype",
+    description: "Smart agricultural automation system using ESP32 controllers, telemetry monitoring, and automated relay pump triggers.",
+    tech: ["C++", "ESP32", "IoT", "Sensors"],
+    github: "https://github.com/Rajit2207",
+    live: "https://example.com"
+  },
+  {
+    title: "Road Accident Pattern Analyzer",
+    description: "Analytical processing engine evaluating accident cluster patterns, road safety metrics, and location heatmaps from CSV datasets.",
+    tech: ["Python", "Data Analysis", "Pandas", "Matplotlib"],
+    github: "https://github.com/Rajit2207",
+    live: "https://example.com"
+  }
+];
+
+export default function Projects() {
+  return (
+    <section id="projects" className="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+      <div className="flex items-center gap-3 mb-10">
+        <FolderGit2 className="text-sky-400 w-7 h-7" />
+        <h2 className="text-3xl font-bold tracking-tight text-white">Featured Projects</h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((item, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col justify-between bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-colors"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xs font-mono text-sky-400">0{idx + 1}.</span>
+                <div className="flex items-center gap-3 text-slate-400">
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={item.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                {item.description}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/60">
+              {item.tech.map((t, tIdx) => (
+                <span
+                  key={tIdx}
+                  className="text-xs font-mono text-slate-300 bg-slate-800 px-2.5 py-1 rounded"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
