@@ -1,4 +1,4 @@
-import { ExternalLink, Github, FolderGit2 } from 'lucide-react';
+import { ExternalLink, Code2, FolderGit2 } from 'lucide-react';
 
 const projects = [
   {
@@ -48,7 +48,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className="hover:text-white transition-colors"
                   >
-                    <Github className="w-5 h-5" />
+                    <Code2 className="w-5 h-5" />
                   </a>
                   <a
                     href={item.live}
