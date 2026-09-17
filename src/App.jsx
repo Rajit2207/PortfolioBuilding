@@ -15,6 +15,13 @@ export default function App() {
         <Projects />
         <Experience />
         <Skills />
+        import GithubStats from './components/GithubStats';
+
+// Inside App():
+// ...
+<Skills />
+<GithubStats />
+<Contact />
       </main>
       <Contact />
       <BackToTop />
